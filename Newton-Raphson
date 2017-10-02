@@ -1,0 +1,17 @@
+import javax.swing.JOptionPane;
+
+public class NewtonRaphson 
+{
+
+	public static void main(String[] args) 
+	{
+		double P0, P1, funcion, funcionDev, x = 0;
+		P0 = Integer.parseInt(JOptionPane.showInputDialog("Digite un número")); 
+		x = P0;
+		funcion = (x*x*x*x)-(2*(x*x*x))-(4*(x*x))+(4*(x))+4; 
+		funcionDev = (4*(x*x*x))-(6*(x*x))-(8*(x))+4;
+		P1 = P0 - ((funcion)/(funcionDev));
+		System.out.println("f(P1) = "+P1);	
+	}
+
+}
