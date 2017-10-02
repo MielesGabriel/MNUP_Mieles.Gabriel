@@ -1,0 +1,52 @@
+import javax.swing.JOptionPane;
+
+public class Biseccion 
+{
+
+	public static void main(String[] args) 
+	{
+		int a1, b1, P1, funcion, x = 0, aux;
+		int a2, b2;
+		String raiz;
+		funcion = (-2*(x*x*x))+(4*(x*x))-1;
+		
+		a1 = Integer.parseInt(JOptionPane.showInputDialog("Digite un número")); 
+		b1 = Integer.parseInt(JOptionPane.showInputDialog("Digite un número")); 
+		P1 = (a1+b1)/2;
+		x = P1;
+		System.out.println("P1 = "+P1);
+		funcion = (-2*(x*x*x))+(4*(x*x))-1;
+		System.out.println("f(P1) = "+funcion);
+		aux = funcion;
+		x = a1;
+		funcion = (-2*(x*x*x))+(4*(x*x))-1;
+		System.out.println("f(a1) = "+funcion);
+		
+		if (aux == 0)
+			{
+				raiz = "Hallamos la raiz";
+				System.out.println(raiz);
+			}
+		
+		if (aux != 0)
+		{
+			if (aux*funcion < 0)
+				{
+					a2 = a1;
+					b2 = P1;
+					System.out.println("a2 = "+a2);
+					System.out.println("b2 = "+b2);	
+				}
+			if (aux*funcion > 0)
+				{
+					a2 = P1;
+					b2 = b1;
+					System.out.println("a2 = "+a2);
+					System.out.println("b2 = "+b2);
+					
+				}
+		}
+		
+		
+	}
+}
