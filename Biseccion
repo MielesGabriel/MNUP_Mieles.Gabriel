@@ -5,8 +5,8 @@ public class Biseccion
 
 	public static void main(String[] args) 
 	{
-		int a1, b1, P1, funcion, x = 0, aux;
-		int a2, b2;
+		double a1, b1, P1, funcion, x = 0, aux;
+		double a2, b2;
 		String raiz;
 		funcion = (-2*(x*x*x))+(4*(x*x))-1;
 		
