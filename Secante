@@ -1,0 +1,27 @@
+import javax.swing.JOptionPane;
+
+public class Secante 
+{
+
+	public static void main(String[] args)
+	{
+		double P1, P2, P3, funcion, funcion2, x = 0, y = 0;
+		funcion = (230*(x*x*x*x))+(18*(x*x*x))+(9*(x*x))-221*(x)-9;
+		funcion2 = (230*(x*x*x*x))+(18*(x*x*x))+(9*(x*x))-221*(x)-9;
+		
+		P1 = Integer.parseInt(JOptionPane.showInputDialog("Digite un número")); 
+		P2 = Integer.parseInt(JOptionPane.showInputDialog("Digite un número")); 
+		
+		x = P1;
+		y = P2;
+		
+		funcion = (230*(x*x*x*x))+(18*(x*x*x))+(9*(x*x))-221*(x)-9;
+		System.out.println("f(P1) = "+ funcion);
+		funcion2 = (230*(y*y*y*y))+(18*(y*y*y))+(9*(y*y))-221*(y)-9;
+		System.out.println("f(P2) = "+ funcion2);
+		P3 = P2 - ((funcion2)*(P2-P1))/((funcion2)-(funcion));
+		System.out.println("P3 = "+ P3);
+
+	}
+
+}
