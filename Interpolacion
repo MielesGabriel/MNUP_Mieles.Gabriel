@@ -1,0 +1,35 @@
+import javax.swing.JOptionPane;
+
+public class Interpolacion 
+{
+	public static void main(String[] args) 
+	{
+		double x0, x1, x2, x3;
+		double fx0, fx1, fx2, fx3;
+		double fx3x2x1x0, fx3x2x1, fx2x1x0, fx3x2, fx2x1, fx1x0;
+		
+		x0 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor x0"));
+		x1 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor x1"));
+		x2 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor x2"));
+		x3 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor x3"));
+		
+		fx0 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor fx0"));
+		fx1 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor fx1"));
+		fx2 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor fx2"));
+		fx3 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor fx3"));
+		
+		fx3x2 = (fx3 - fx2)/(x3 - x2);
+		fx2x1 = (fx2 - fx1)/(x2 - x1);
+		fx1x0 = (fx1 - fx0)/(x1 - x0);
+		fx3x2x1 = (fx3x2 - fx2x1)/(x3 - x1);
+		fx2x1x0 = (fx2x1 - fx1x0)/(x2 - x0);
+		fx3x2x1x0 = (fx3x2x1 - fx2x1x0)/(x3 - x0);
+		
+		System.out.println("fx3x2x1x0 = " + fx3x2x1x0);
+		System.out.println("fx3x2x1 = " + fx3x2x1);
+		System.out.println("fx2x1x0 = " + fx2x1x0);
+		System.out.println("fx3x2 = "+fx3x2);
+		System.out.println("fx2x1 = "+fx2x1);
+		System.out.println("fx1x0 = "+fx1x0);
+	}
+}
