@@ -1,0 +1,43 @@
+import javax.swing.JOptionPane;
+
+public class Lagrange 
+{
+	public static void main(String[] args)
+	{
+		double x, x0, x1, x2, x3, x4;
+		double L40, L41, L42, L43, L44;
+		double fx0, fx1, fx2, fx3, fx4;
+		double P4;
+		
+		x = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor x"));
+		x0 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor x0"));
+		x1 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor x1"));
+		x2 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor x2"));
+		x3 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor x3"));
+		x4 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor x4"));
+		
+		fx0 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor fx0"));
+		fx1 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor fx1"));
+		fx2 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor fx2"));
+		fx3 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor fx3"));
+		fx4 = Double.parseDouble(JOptionPane.showInputDialog("Escribir valor fx4"));
+		
+		L40 = ((x-x4)*(x-x3)*(x-x2)*(x-x1))/((x0-x4)*(x0-x3)*(x0-x2)*(x0-x1));
+		System.out.println("L40 = "+L40);
+		
+		L41 = ((x-x4)*(x-x3)*(x-x2)*(x-x0))/((x1-x4)*(x1-x3)*(x1-x2)*(x1-x0));
+		System.out.println("L41 = "+L41);
+		
+		L42 = ((x-x4)*(x-x3)*(x-x1)*(x-x0))/((x2-x4)*(x2-x3)*(x2-x1)*(x2-x0));
+		System.out.println("L42 = "+L42);
+		
+		L43 = ((x-x4)*(x-x2)*(x-x1)*(x-x0))/((x3-x4)*(x3-x2)*(x3-x1)*(x3-x0));
+		System.out.println("L43 = "+L43);
+		
+		L44 = ((x-x3)*(x-x2)*(x-x1)*(x-x0))/((x4-x3)*(x4-x2)*(x4-x1)*(x4-x0));
+		System.out.println("L44 = "+L44);
+		
+		P4 = fx0*L40 + fx1*L41 + fx2*L42 + fx3*L43 + fx4*L44;
+		System.out.println("P4 = "+P4);
+	}
+}
